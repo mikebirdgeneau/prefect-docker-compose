@@ -8,7 +8,7 @@ import s3_utils
 
 import prefect
 from prefect import Flow, task, Client, config
-from prefect.environments.storage import Webhook
+from prefect.storage import Webhook
 
 logger = prefect.context.get("logger")
 

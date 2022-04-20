@@ -5,7 +5,7 @@ import json
 import requests
 import prefect
 from prefect import Flow, task, Client
-from prefect.environments.storage import Docker
+from prefect.storage import Docker
 
 logger = prefect.context.get("logger")
 
