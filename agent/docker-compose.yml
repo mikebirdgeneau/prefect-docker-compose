@@ -6,8 +6,5 @@ services:
         build: .
         command: bash -c "prefect agent local start --name $$(uuid) --no-hostname-label --label development"
         volumes:
-            - /srv/docker/prefect/flows:/root/.prefect/flows
-            - type: bind
-              source: ./config.toml
-              target: /root/.prefect/config.toml
-              read_only: true
+            - /srv/docker/prefect/flows:/root/.prefect/flows:z
+            - ./config.toml:/root/.prefect/config.toml:z
